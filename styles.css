@@ -1,0 +1,701 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
+
+:root {
+  /* Colors */
+  --clr-primary: rgba(34, 153, 104, 1);
+  --clr-secondary: rgba(255, 202, 40, 1);
+  --clr-accent: rgba(79, 195, 247, 1);
+  --clr-grey: rgba(26, 26, 26, 1);
+  --clr-white: rgba(255, 255, 255, 1);
+  --clr-primaryacc: #91fec4;
+
+  /* Font Families */
+  --ff-primary: "Lexend", sans-serif; /* body text */
+  --ff-header: "Plus Jakarta Sans", sans-serif; /* headings, UI chrome */
+
+  /* Font Weights */
+  --fw-norm: 400;
+  --fw-bold: 700;
+  --fw-vbold: 900;
+
+  /* Font Sizes */
+  --fs-small: 1rem; /* 16px */
+  --fs-medium: 1.25rem; /* 20px */
+  --fs-large: 2rem; /* 32px */
+  --fs-xlarge: 3rem; /* 48px */
+}
+/* Box sizing — all elements */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove all margin & padding */
+* {
+  padding: 0;
+  margin: 0;
+}
+
+/* Full height + smooth height transitions */
+html,
+body {
+  height: 100%;
+  interpolate-size: allow-keywords;
+}
+
+/* Remove list styles when role="list" is set */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Smooth scroll on focus */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* ── Header & Nav Layout ── */
+header {
+  background-color: white;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+font-family: var(--ff-header);
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; /* links sit on the right */
+  padding: 1rem 2rem;
+  position: relative;
+}
+
+/* ── Nav Links ── */
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.menu-links a {
+  color:var(--clr-primary);
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.2s ease;
+}
+
+.menu-links a:hover {
+  color: #e94560;
+}
+
+/* ── CTA Button (Free Estimate) ── */
+.cta-link {
+  background-color:var(--clr-secondary);
+  color:var(--clr-grey)!important;
+  padding: 0.5rem 1.2rem;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: background-color 0.2s ease !important;
+}
+
+.cta-link:hover {
+  background-color: #c73652 !important;
+  color: #fff !important;
+}
+
+/* ── Hamburger Button ── */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+
+/* Build the 3 bars using ::before, ::after, and a middle shadow */
+.menu-toggle::before,
+.menu-toggle::after {
+  content: "";
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color:black;
+  border-radius: 3px;
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
+}
+
+/* Middle bar via box-shadow on ::before */
+.menu-toggle::before {
+  box-shadow: 0 8px 0 #fff;
+}
+
+/* ── Hamburger X Animation ── */
+.menu-toggle.active::before {
+  transform: translateY(8px) rotate(45deg);
+  box-shadow: none;
+}
+
+.menu-toggle.active::after {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* ── Mobile Styles ── */
+@media (max-width: 768px) {
+  nav {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 0;
+    width: 100%;
+    padding: 0.5rem 0;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .menu-links a {
+    display: block;
+    padding: 0.85rem 2rem;
+    border-bottom: 1px solid var(--clr-primary);
+  }
+
+  .menu-links a:hover {
+    background-color: #0f3460;
+  }
+
+  /* CTA still stands out on mobile */
+  .cta-link {
+    display: inline-block;
+    border-radius: 4px;
+  }
+}
+
+/* Core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  background-color: rgba(192, 254, 229, 0.5);
+  margin: 0 auto;
+}
+
+/* Images always block, responsive, auto height */
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+  height: auto;
+}
+
+/* Inputs & buttons inherit font from parent */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* All headings h1–h6 */
+:is(h1, h2, h3, h4, h5, h6) {
+  font-family: var(--ff-header);
+  line-height: 1.2;
+}
+
+/* Paragraphs */
+p {
+  margin-bottom: 0.75rem;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: var(--ff-primary);
+  @media (max-width: 768px) {
+    font-size: 14px;
+    padding: 0.25rem 0;
+  }
+}
+
+/* Horizontal rule */
+hr {
+  width: 33.333%;
+  margin-top: 0.5rem;
+  border: 0.25rem solid var(--clr-primary);
+  @media (max-width: 768px) {
+    width: 66.666%;
+  }
+}
+
+/* Lists */
+ul {
+  list-style: none;
+}
+li {
+  list-style: none;
+  padding: 0 0.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Anchors */
+a {
+  text-decoration: none;
+}
+
+/* Section default */
+section {
+  margin: 0 auto;
+  padding: 1rem 0.75rem;
+}
+
+/* Text colors */
+.tc-white {
+  color: #ffffff;
+}
+.tc-prim {
+  color: var(--clr-primary);
+}
+.tc-sec {
+  color: var(--clr-secondary);
+}
+.tc-acc {
+  color: var(--clr-accent);
+}
+.tc-grey {
+  color: var(--clr-grey);
+}
+
+/* Background colors */
+.bg-primary {
+  background-color: var(--clr-primary);
+}
+.bg-secondary {
+  background-color: var(--clr-secondary);
+}
+.bg-accent {
+  background-color: var(--clr-accent);
+}
+
+.bg-primaryacc {
+  background-color: var(--clr-primaryacc);
+}
+
+/* Font sizes */
+.fs-small {
+  font-size: var(--fs-small);
+} /* 1rem    */
+.fs-medium {
+  font-size: var(--fs-medium);
+} /* 1.25rem */
+.fs-large {
+  font-size: var(--fs-large);
+} /* 2rem    */
+.fs-xlarge {
+  font-size: var(--fs-xlarge);
+} /* 3rem    */
+
+/* Font weights */
+.fw-norm {
+  font-weight: var(--fw-norm);
+} /* 400 */
+.fw-bold {
+  font-weight: var(--fw-bold);
+} /* 700 */
+.fw-vbold {
+  font-weight: var(--fw-vbold);
+} /* 900 */
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+/* Text alignment */
+.center {
+  text-align: center;
+}
+/* Display */
+.flex {
+  display: flex;
+}
+
+/* Direction */
+.flex-row {
+  flex-direction: row;
+}
+.flex-col {
+  flex-direction: column;
+}
+.flex-col-reverse {
+  flex-direction: column-reverse;
+}
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+/* Align Items (cross axis) */
+.items-start {
+  align-items: flex-start;
+}
+.items-end {
+  align-items: flex-end;
+}
+.items-center {
+  align-items: center;
+}
+.items-baseline {
+  align-items: baseline;
+}
+.items-stretch {
+  align-items: stretch;
+}
+
+/* Justify Content (main axis) */
+.justify-start {
+  justify-content: flex-start;
+}
+.justify-end {
+  justify-content: flex-end;
+}
+.justify-center {
+  justify-content: center;
+}
+.justify-between {
+  justify-content: space-between;
+}
+
+/* Gap scale */
+.gap-1 {
+  gap: 0.25rem;
+}
+.gap-2 {
+  gap: 0.5rem;
+}
+.gap-3 {
+  gap: 0.75rem;
+}
+.gap-4 {
+  gap: 1rem;
+}
+.gap-5 {
+  gap: 1.25rem;
+}
+.gap-6 {
+  gap: 1.5rem;
+}
+.gap-8 {
+  gap: 2rem;
+}
+.gap-10 {
+  gap: 2.5rem;
+}
+.gap-16 {
+  gap: 4rem;
+}
+
+/* Margin */
+.mx-0 {
+  margin: 0 auto;
+} /* center horizontally */
+.mx-00 {
+  margin: 0;
+}
+.mt-1 {
+  margin-top: 0.5rem;
+}
+.mt-2 {
+  margin-top: 2.5rem;
+}
+.mt-4 {
+  margin-top: 4rem;
+}
+.mb-2 {
+  margin-bottom: 0.75rem;
+}
+
+/* Padding */
+.pt-1 {
+  padding-top: 0.25rem;
+}
+.pt-2 {
+  padding-top: 2.5rem;
+}
+.pt-4 {
+  padding-top: 4rem;
+}
+.pb-1 {
+  padding-bottom: 0.25rem;
+}
+.pb-2 {
+  padding-bottom: 2.5rem;
+}
+.pb-4 {
+  padding-bottom: 4rem;
+}
+.px-0 {
+  padding: 0;
+}
+
+.py-1 {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
+.py-2 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.py-1 {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* Full-width, auto-centered page wrapper */
+.container {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* General content wrapper — stacks on mobile */
+.wrapper {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Inner block with consistent margins */
+.standard-block {
+  margin-top: 0.75rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Centered text/content block */
+.text-wrapper {
+  margin-bottom: 1rem;
+  padding: 0.25rem 0;
+}
+
+.block-650 {
+  max-width: 650px;
+}
+.block-350 {
+  max-width: 350px;
+}
+
+/*Desktop Rule*/
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100; /* keeps it above other content */
+}
+.nav-desktop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #ffffff;
+  color: black;
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #e94560;
+  }
+  nav ul li a {
+    color: white;
+    font-size: 1rem;
+    padding: 0.5rem 0;
+    transition: color 0.2s ease;
+  }
+
+  nav ul li a:hover {
+    color: #e94560; /* red highlight on hover */
+  }
+}
+/*Desktop Rule*/
+
+.mobile-nav {
+  display: none;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 5px;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    padding: 4px;
+    .bar {
+      display: block;
+      width: 25px;
+      height: 3px;
+      background-color: white;
+      border-radius: 3px;
+      transition:
+        transform 0.3s ease,
+        opacity 0.3s ease;
+    }
+  }
+}
+
+.primary-btn {
+  background: var(--clr-primary);
+  color: white;
+  border-radius: 20px;
+  padding: 1rem 0.75rem;
+  font-family: var(--ff-header);
+  font-size: 1rem;
+  box-shadow: 9px 4.5px 5.5px -6px #000;
+}
+.primary-block {
+  background: #ffcb2f;
+  color: var(--clr-grey);
+  border-radius: 20px;
+  padding: 0.5rem 1.75rem;
+  font-family: var(--ff-header);
+  font-size: 1rem;
+  font-weight: 700;
+  border: #ffcb2f solid;
+}
+
+.primary-btn:hover {
+  background-color: var(--clr-secondary);
+}
+
+.secondary-btn {
+  background: var(--clr-secondary);
+  color: white;
+}
+.secondary-btn:hover {
+  background-color: var(--clr-primary);
+}
+
+/*Card Setup*/
+.card-item {
+  border-radius: 2rem;
+  padding: 2rem;
+  background-color: #fff;
+  max-width: 400px;
+  text-align: left;
+  border-width: 1px;
+  display: flex;
+  flex-direction: column;
+
+  .card-title {
+    font-family: var(--ff-header);
+    font-weight: var(--fw-vbold);
+    font-size: 1.5rem;
+    color: var(--clr-primary);
+    margin-bottom: 1rem;
+    padding: 0;
+    cursor: pointer;
+  }
+  .card-text {
+    color: var(--clr-primary);
+    line-height: 1.625;
+  }
+  .card-svg {
+    border-radius: 50px;
+    width: 3rem;
+    height: 3rem;
+    margin-bottom: 0.75rem;
+
+    @media (max-width: 768px) {
+      width: 3rem;
+      height: auto;
+      border-radius: 15px;
+    }
+  }
+}
+.card-item:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  transform: translateY(-4px); /* optional: lifts the card up */
+}
+
+details {
+  color: var(--clr-grey);
+  background-color: rgba(192, 254, 229, 1);
+  font-weight: 700;
+  padding: 1rem 1rem;
+  margin-bottom: 1rem;
+  font-family: var(--ff-header);
+  border-radius: 15px;
+  font-size: 1.25rem;
+
+  summary {
+    padding: 1rem 0;
+    margin: 0 1rem;
+    font-weight: 800;
+    color: var(--clr-grey);
+    text-transform: capitalize;
+  }
+  .detail-wrapper {
+    margin: 0 auto;
+    padding: 0.75rem 0.25rem;
+  }
+}
+
+.form-container {
+  background: white;
+  padding: 3rem 1rem;
+  margin: 1rem;
+  border-radius: 50px;
+
+  form > label {
+    font-family: var(--ff-header);
+    color: var(--clr-primary);
+    font-weight: 800;
+  }
+  input#name,
+  input#email,
+  textarea#msg {
+    border-radius: 15px;
+    border: 1px solid #999;
+    padding: 0.75rem 0.25rem;
+  }
+
+  input::placeholder,
+  textarea::placeholder {
+    color: #999;
+    font-size: 0.9rem;
+    opacity: 1; /* Firefox reduces opacity by default */
+  }
+}
+
+input#name,
+input#email,
+textarea#msg:hover {
+  border: 1px solid var(--clr-primary);
+}
+
+span.banner {
+  font-family: var(--ff-primary);
+  margin-bottom: 0.75rem;
+  font-size: 0.75rem;
+  border-radius: 50px;
+  letter-spacing: 0.1em;
+}
+
+/* Rounded variant */
+.img-border-rounded {
+  border-radius: 16px;
+}
