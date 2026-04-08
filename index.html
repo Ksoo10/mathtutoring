@@ -7,17 +7,19 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <header>
-      <nav>
-    <button class="menu-toggle" aria-label="Toggle Menu" aria-expanded="false">
-  
-    </button>
-    <ul class="nav-links">
-      <li class="menu-links"><a href="index.html">Home</a></li>
-      <li class="menu-links"><a href="service.html">Services</a></li>
-      <li class="menu-links"><a href="about-us.html">About Us</a></li>
-          <button class="primary-block" type="submit">Send Message</button>
-    </ul>
-  </nav>
+    <nav>
+      <button
+        class="menu-toggle"
+        aria-label="Toggle Menu"
+        aria-expanded="false"
+      ></button>
+      <ul class="nav-links">
+        <li class="menu-links"><a href="index.html">Home</a></li>
+        <li class="menu-links"><a href="service.html">Services</a></li>
+        <li class="menu-links"><a href="about-us.html">About Us</a></li>
+        <button class="primary-block" type="submit">Send Message</button>
+      </ul>
+    </nav>
   </header>
   <body>
     <main>
@@ -37,7 +39,7 @@
           </div>
           <picture>
             <source srcset="Images/kids-table.png" type="image/jpeg" />
-            <img src="Images/kids-table.png" alt="Description" />
+            <img src="/Images/kids-table.png" alt="Description" />
           </picture>
         </div>
       </section>
@@ -46,7 +48,7 @@
       <section class="container">
         <div class="standard-block">
           <div class="text-wrapper center mx-0">
-            <span class="banner py-1 mb-2 text-uppercase px-4 bg-secondary"
+            <span class="banner py-1 mb-2 text-uppercase px-4 bg-accent"
               >Our Apporach</span
             >
             <h2 class="fs-large fw-bold tc-prim mt-1">
@@ -72,8 +74,9 @@
 
                 <h3 class="card-title mb-2">Personalized Plans</h3>
                 <p class="card-text">
-                  Expert guidance to turn stressful evenings into productive,
-                  confidence building moments at the kitchen table.
+                  Sessions are built specifically for 3rd and 6th grade
+                  curriculum so your child gets support that directly matches
+                  what they are learning in school.
                 </p>
               </div>
               <div class="card-item">
@@ -96,8 +99,9 @@
 
                 <h3 class="card-title">Homework Help</h3>
                 <p class="card-text">
-                  Expert guidance to turn stressful evenings into productive,
-                  confidence building moments at the kitchen table.
+                  We work through the exact math problems your child brings
+                  home. Multiplication tables, fractions, ratios, pre algebra.
+                  We make each concept easy to understand.
                 </p>
               </div>
               <div class="card-item">
@@ -131,30 +135,36 @@
       <section>
         <div class="standard-block">
           <div class="container">
-            <div class="">
-              <span class="banner py-1 mb-2 text-uppercase px-4 bg-accent"
-                >Our Apporach</span
-              >
-              <div class="text-wrapper">
-                <h3 class="fs-large fw-bold tc-prim mt-1">Meet Mr.Mcdonald</h3>
-              </div>
-              <div class="text-wrapper">
-                <p>
-                  Adrian holds a Bacholer in Education from Delaware State
-                  University and has spent 5 years helping elementary students
-                  build a genuine love for learning math.
-                </p>
-              </div>
-              <div class="text-wrapper">
-                <p>
-                  He believe every child is capable of understanding math when
-                  it is taught with patience, creativity, and a whole lot of
-                  encouragement.
-                </p>
-              </div>
-              <div class="wrapper">
-                <button class="primary-block">Book a Free Consultation</button>
-              </div>
+            <div class="text-wrapper">
+              <h3 class="fs-large fw-bold tc-prim mt-1">Meet Mr.Mcdonald</h3>
+            </div>
+            <div class="text-wrapper">
+              <p>
+                Adrian holds a
+                <span class="fw-bold tc-prim">Bachelor's Degree </span> from
+                <span class="fw-bold tc-prim">Delaware State University </span>
+                and has spent the past
+                <span class="fw-bold tc-prim">5 Years </span> teaching students
+                in 3rd and 6th grade. He understands exactly where young
+                learners get stuck from multiplication and division in 3rd grade
+                to ratios and pre algebra in 6th grade. Every concept is covered
+                with <span class="fw-bold tc-prim">patience</span> and
+                <span class="fw-bold tc-prim">clarity</span>.
+              </p>
+            </div>
+            <div class="text-wrapper">
+              <p>
+                Throughout his <span class="fw-bold tc-prim">5 Years </span> in
+                the classroom, Adrian has seen firsthand what makes math click
+                for young students. He builds every session around your child's
+                current schoolwork so nothing feels disconnected or confusing.
+                Whether your child is mastering multiplication tables in 3rd
+                grade or navigating ratios and pre algebra in 6th grade, Adrian
+                meets them with a clear plan and a calm, encouraging approach.
+              </p>
+            </div>
+            <div class="wrapper">
+              <button class="primary-block">Book With Adrian</button>
             </div>
           </div>
         </div>
@@ -163,7 +173,7 @@
       <!-- ─── ACCORDION / FAQ ─── -->
       <section>
         <div class="wrapper">
-          <span class="banner py-1 text-uppercase px-4 bg-secondary"
+          <span class="banner py-1 text-uppercase px-4 bg-accent"
             >Common Queries</span
           >
           <div class="text-wrapper">
@@ -203,7 +213,7 @@
           </details>
           <details>
             <summary>Can I reschedule a session?</summary>
-            <div class="dehtail-wrapper">
+            <div class="detail-wrapper">
               <p>
                 Absolutely. Life appens and we make it easy to adjust your
                 schedule with no penalties.
@@ -216,18 +226,16 @@
       <!-- ─── CONTACT FORM ─── -->
       <section id="contact">
         <div class="form-container block-650">
-          <div class="center py-1 mt-1">
-            <h3 class="fs-large fw-bold tc-prim">Start the Journey</h3>
-            <span class="tc-prim center mt-1">
-              Tell us a little about your child's needs.</span
-            >
-          </div>
-
           <form
             class="flex flex-col form-wrapper gap-2"
             action="#"
             method="POST"
           >
+            <h3 class="fs-large fw-bold tc-prim center">Start the Journey</h3>
+            <span class="tc-prim center">
+              Tell us a little about your child's needs.</span
+            >
+
             <label for="name"> Parent Name</label>
             <input
               type="text"
@@ -255,21 +263,23 @@
       </section>
     </main>
   </body>
-  <script>const menuToggle = document.querySelector('.menu-toggle');
-const navLinks = document.querySelector('.nav-links');
+  <script>
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navLinks = document.querySelector(".nav-links");
 
-menuToggle.addEventListener('click', () => {
-  const isOpen = navLinks.classList.toggle('active');
-  menuToggle.classList.toggle('active');
-  menuToggle.setAttribute('aria-expanded', isOpen);
-});
+    menuToggle.addEventListener("click", () => {
+      const isOpen = navLinks.classList.toggle("active");
+      menuToggle.classList.toggle("active");
+      menuToggle.setAttribute("aria-expanded", isOpen);
+    });
 
-// Close menu when a nav link is clicked
-navLinks.querySelectorAll('a').forEach(link => {
-  link.addEventListener('click', () => {
-    navLinks.classList.remove('active');
-    menuToggle.classList.remove('active');
-    menuToggle.setAttribute('aria-expanded', false);
-  });
-});</script>
+    // Close menu when a nav link is clicked
+    navLinks.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("active");
+        menuToggle.classList.remove("active");
+        menuToggle.setAttribute("aria-expanded", false);
+      });
+    });
+  </script>
 </html>
