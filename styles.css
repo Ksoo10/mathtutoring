@@ -567,7 +567,8 @@ header {
   padding: 1rem 0.75rem;
   font-family: var(--ff-header);
   font-size: 1rem;
-  box-shadow: 9px 4.5px 5.5px -6px #000;
+  border: none;
+  margin-top: 0.75rem;
 }
 .primary-block {
   background: #ffcb2f;
