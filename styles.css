@@ -578,6 +578,7 @@ header {
   font-family: var(--ff-header);
   font-size: 1rem;
   font-weight: 700;
+  margin-top: .75rem;
   border: #ffcb2f solid;
 }
 
@@ -662,6 +663,7 @@ details {
 
   p {
     color: var(--clr-primary);
+    display: inline;
   }
   /* Remove default marker */
   summary::marker,
@@ -676,14 +678,19 @@ details {
     color: black;
     margin-left: 5px;
   }
-  details[open] summary::after {
-    transform: rotate(45deg);
-  }
+
+[open] summary::after {
+  transform: rotate(0deg);
+}
+  .detail-wrapper 
+  {
+    transition: all 0.5s ease, content-visibility 0.5s ease allow-discrete; /* Rely on the special animation powers of content-visibility */
+  overflow: clip; /* Clip off contents while animating */}
 }
 
 .form-container {
   background: white;
-  padding: 3rem 2em;
+  padding: 2rem 2em;
   margin: 1rem;
   border-radius: 25px;
 
@@ -725,4 +732,20 @@ span.banner {
 /* Rounded variant */
 .img-border-rounded {
   border-radius: 16px;
+}
+
+
+.site-footer {
+  margin: 0 auto;
+  padding: 1rem 0.75rem;
+  background-color:#ffffff;
+  border-radius: 10% 10% 0 0;
+ a {
+  text-decoration: none;
+  color: var(--clr-primary);
+  font-size: .85rem;
+}
+.footer-item {
+  margin-bottom: .25rem;
+}
 }
