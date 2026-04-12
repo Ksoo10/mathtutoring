@@ -291,6 +291,10 @@ section {
   background-color: var(--clr-primaryacc);
 }
 
+.bg-white {
+  background-color: var(--clr-white);
+}
+
 /* Font sizes */
 .fs-small {
   font-size: var(--fs-small);
