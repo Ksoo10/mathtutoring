@@ -38,7 +38,7 @@
             <button class="primary-block">Book a Free Consultation</button>
           </div>
           <picture>
-            <source srcset="Images/kids-table.png" type="image/jpeg" />
+            <source srcset="/Images/kids-table.png" type="image/jpeg" />
             <img src="/Images/kids-table.png" alt="Description" />
           </picture>
         </div>
@@ -48,11 +48,8 @@
       <section class="container">
         <div class="standard-block">
           <div class="text-wrapper center mx-0">
-            <span class="banner py-1 mb-2 text-uppercase px-4 bg-accent"
-              >Our Apporach</span
-            >
             <h2 class="fs-large fw-bold tc-prim mt-1">
-              Personalized Support for Every Learner
+              Everything Your Child Needs to Succeed in Math
             </h2>
             <div class="flex flex-wrap justify-center gap-6 mt-2">
               <div class="card-item">
@@ -138,6 +135,15 @@
             <div class="text-wrapper">
               <h3 class="fs-large fw-bold tc-prim mt-1">Meet Mr.Mcdonald</h3>
             </div>
+            <div class="wrapper">
+              <picture>
+                <source
+                  srcset="/Images/adrianimg.jpg"
+                  type="image/jpeg"
+                />
+                <img src="/Images/adrianimg.jpg" alt="Description"  width="450px" height="100" class="img-border-rounded "/>
+              </picture>
+            </div>
             <div class="text-wrapper">
               <p>
                 Adrian holds a
@@ -164,7 +170,7 @@
               </p>
             </div>
             <div class="wrapper">
-              <button class="primary-block">Book With Adrian</button>
+              <button class="primary-block">Learn More</button>
             </div>
           </div>
         </div>
@@ -173,50 +179,54 @@
       <!-- ─── ACCORDION / FAQ ─── -->
       <section>
         <div class="wrapper">
-          <span class="banner py-1 text-uppercase px-4 bg-accent"
-            >Common Queries</span
-          >
           <div class="text-wrapper">
             <h3 class="fs-large fw-bold tc-prim center">
-              Frequently Asked Question
+              Your Questions About Adrian Answered
             </h3>
           </div>
         </div>
 
         <div class="block-650 mx-0">
-          <details>
-            <summary>What grade groups do you serve?</summary>
+          <details name="exclusive">
+            <summary>What grades does Adrian tutor?</summary>
             <div class="detail-wrapper">
               <p>
-                We specialize in elementary education, supporting students from
-                Kindergarten through 5th Grade.
+                We work specifically with students in 3rd grade and 6th grade.
+                Every session is built around the exact curriculum your child is
+                following in school.
               </p>
             </div>
           </details>
-          <details>
-            <summary>Do you offer in person or online options?</summary>
+          <details name="exclusive">
+            <summary>
+              My child is really struggling with math. Can he help?
+            </summary>
             <div class="detail-wrapper">
               <p>
-                We offer both. Sessions are available at home, at our learning
-                center, or via a simple and easy to use video platform.
+                Absolutely. He specializes in students who feel left behind or
+                frustrated by math. Sessions start from the foundation and build
+                up at a pace that works for your child.
               </p>
             </div>
           </details>
-          <details>
-            <summary>How do I track my child's progress?</summary>
+          <details name="exclusive">
+            <summary>Where is he located? Can we meet in person?</summary>
             <div class="detail-wrapper">
               <p>
-                Parents receive regular progress updates so you always know how
-                your child is growing and improving.
+                Adrian is based in Dover, Delaware and welcomes in person
+                sessions at his location. Families outside Dover can also
+                connect through online sessions using a kid friendly platform
+                with a shared digital whiteboard.
               </p>
             </div>
           </details>
-          <details>
-            <summary>Can I reschedule a session?</summary>
+          <details name="exclusive">
+            <summary>How will I know how my child is progressing?</summary>
             <div class="detail-wrapper">
               <p>
-                Absolutely. Life appens and we make it easy to adjust your
-                schedule with no penalties.
+                After each session a quick update is shared covering what was
+                taught, where your child improved, and what to focus on next so
+                you are never left wondering how things are going.
               </p>
             </div>
           </details>
@@ -232,7 +242,7 @@
             method="POST"
           >
             <h3 class="fs-large fw-bold tc-prim center">Start the Journey</h3>
-            <span class="tc-prim center">
+            <span class="center">
               Tell us a little about your child's needs.</span
             >
 
@@ -261,6 +271,69 @@
           </form>
         </div>
       </section>
+      <footer class="site-footer">
+        <!-- Skeleton state -->
+        <div class="container">
+          <div class="footer-inner flex flex-col">
+            <!-- logo + tagline + social -->
+            <div class="footer-col flex flex-col">
+              <div class="footer-item">
+                <a href="#">About Us</a>
+              </div>
+              <div class="footer-item">
+                <a href="#">Contact Us</a>
+              </div>
+              <div class="footer-item">
+                <a href="#">Services</a>
+              </div>
+              <div class="footer-item">
+                <a href="#">Terms of Use</a>
+              </div>
+              <div class="footer-item">
+                <a href="#">Privacy Policy</a>
+              </div>
+            </div>
+            <div class="footer-social flex">
+              <div class="footer-item">
+                <a href="#">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="#229968"
+                    xmlns="http://www.w3.org/2000/svg"
+                    transform="rotate(0 0 0)"
+                  >
+                    <path
+                      d="M19.7065 3H4.34844C3.62264 3 3.04199 3.58065 3.04199 4.30645V19.6935C3.04199 20.3903 3.62264 21 4.34844 21H19.6485C20.3743 21 20.9549 20.4194 20.9549 19.6935V4.27742C21.013 3.58065 20.4323 3 19.7065 3ZM8.35491 18.3H5.71297V9.73548H8.35491V18.3ZM7.01942 8.54516C6.14846 8.54516 5.4807 7.84839 5.4807 7.00645C5.4807 6.16452 6.17749 5.46774 7.01942 5.46774C7.86136 5.46774 8.55813 6.16452 8.55813 7.00645C8.55813 7.84839 7.91942 8.54516 7.01942 8.54516ZM18.371 18.3H15.7291V14.1484C15.7291 13.1613 15.7001 11.8548 14.3356 11.8548C12.942 11.8548 12.7388 12.9581 12.7388 14.0613V18.3H10.0968V9.73548H12.6807V10.9258H12.7097C13.0872 10.229 13.9291 9.53226 15.2356 9.53226C17.9356 9.53226 18.4291 11.2742 18.4291 13.6548V18.3H18.371Z"
+                      fill="#229968"
+                    /></svg
+                ></a>
+              </div>
+              <div class="footer-item">
+                <a href="#"
+                  ><svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="#229968"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12.1445 18.709C13.91 19.7033 15.8077 20.3757 17.7521 20.7262C18.2616 20.8181 18.7782 20.6388 19.1443 20.2727L20.2124 19.2045C21.118 18.2989 20.8403 16.7676 19.6744 16.2377L16.1076 14.6164C15.3921 14.2912 14.3287 14.4486 13.9441 15.1989L12.1445 18.709ZM12.1445 18.709C10.7498 17.9235 9.43759 16.9371 8.25026 15.7497C7.06293 14.5624 6.07651 13.2503 5.29099 11.8555M5.29099 11.8555C4.29669 10.0901 3.62428 8.19234 3.27376 6.24794C3.18191 5.73847 3.36125 5.22182 3.72733 4.85577L4.79552 3.78764C5.7011 2.88206 7.23243 3.15974 7.76238 4.32564L9.38366 7.89244C9.70889 8.60794 9.55145 9.67133 8.80112 10.056L5.29099 11.8555Z"
+                      stroke="#323544"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- Company links -->
+        </div>
+      </footer>
     </main>
   </body>
   <script>
@@ -283,3 +356,4 @@
     });
   </script>
 </html>
+
