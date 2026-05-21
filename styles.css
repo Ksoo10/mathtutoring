@@ -649,7 +649,6 @@ margin-top: var(--sp-4);
   input#name,
   input#email,
   textarea#msg {
-    border-radius: 15px;
    border: none;
     padding: 0.75rem 0.5rem;
     border-bottom: 1px solid #cccc;
