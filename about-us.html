@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Is your child struggling with math? Our private 
-math tutor specializes in 3rd and 6th grade 
-tutoring in Dover, DE. In person and online 
-sessions available. Book a free consultation today."
+      content="Get in touch with a private elementary math
+tutor in Dover, Delaware. In person and online
+sessions for 3rd and 6th graders."
     />
     <title>Precision Math Tutoring</title>
     <link rel="stylesheet" href="styles.css" />
+     <script src="index.js" defer></script>
   </head>
   <body>
     <header>
@@ -23,7 +23,7 @@ sessions available. Book a free consultation today."
         ></button>
         <ul class="nav-links">
           <li class="menu-links"><a href="index.html">Home</a></li>
-          <li class="menu-links"><a href="service.html">My Mission</a></li>
+          <li class="menu-links"><a href="mission.html">My Mission</a></li>
           <li class="menu-links"><a href="about-us.html">Contact</a></li>
         </ul>
       </nav>
@@ -31,42 +31,65 @@ sessions available. Book a free consultation today."
     <main>
       <section id="hero" class="section">
         <div class="container-lg">
-          <div class="flex-center bg-primary">
+          <div class="flex-center">
             <div class="text-wrapper">
-              <h1 class="tx-primary fw-bold">
-                Private Math Tutoring for Your Child
-              </h1>
+              <h1 class="fw-bold">Private Math Tutoring for Your Child</h1>
             </div>
           </div>
         </div>
       </section>
       <!-- itemLayout1 -->
-      <section id="contact" class="section">
+      <section id="contact" class="section bg-white">
         <div class="container-lg">
+          <div class="container-sm">
+            <div class="text-wrapper">
+              <h2 class="fw-bold tx-primary">How It Works</h2>
+              <p class="fw-bold">
+                I know that reaching out for help can be intimidating. That's
+                why I make it as easy as possible to get started. Just follow
+                these simple steps and we'll be on our way to helping your child
+                succeed in math.
+              </p>
+            </div>
+          </div>
           <div class="flex-row-stretch-wrap">
-            <div class="flex-col">
-              <h3>Step 01</h3>
-              <p>
-                I will review your message and reach out within 24 hours to set
-                up a free 15 minute discovery call.
-              </p>
-            </div>
+            <div class="container-wrapper">
+              <div class="container-item">
+                <h3 class="fw-bold tx-primary">Step 01</h3>
+                <p>
+                  Send me a message through the form below. I will review what
+                  you share and get back to you within 24 hours to set up a free
+                  15 minute discovery call.
+                </p>
+              </div>
 
-            <div class="flex-col">
-              <h3>Step 02</h3>
+              <div class="container-item">
+                <h3 class="fw-bold tx-primary">Step 02</h3>
 
-              <p>
-                On the call we talk through your child's specific challenges and
-                figure out the best plan for them.
-              </p>
-            </div>
+                <p>
+                  On the discovery call we go over your child's specific
+                  challenges, their grade level, and what they need most right
+                  now.
+                </p>
+              </div>
 
-            <div class="flex-col">
-              <h3>Step 03</h3>
-              <p>
-                We schedule the first session and get started. No long
-                commitments. Just a simple next step.
-              </p>
+              <div class="container-item">
+                <h3 class="fw-bold tx-primary">Step 03</h3>
+                <p>
+                  Based on our call I put together a session plan built
+                  specifically around your child's curriculum and learning pace
+                  so every lesson moves them forward.
+                </p>
+              </div>
+
+              <div class="container-item">
+                <h3 class="fw-bold tx-primary">Step 4</h3>
+                <p>
+                  We schedule the first session and begin. No long commitments.
+                  No contracts. Just a clear next step toward your child feeling
+                  capable and confident in math.
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -77,20 +100,20 @@ sessions available. Book a free consultation today."
       <section class="section">
         <div class="container-lg">
           <div class="flex-row-between-wrap">
-            <div class="wrapper">
-              <div class="container-sm"></div>
-            </div>
             <!-- ─── CONTACT FORM ─── -->
             <div class="flex-row-center-wrap container-lg">
-              <div class="text-wrapper">
-                <h3 class="lrg-text tx-primary">
-                  Tell Me a Little About Your Child
-                </h3>
-                <p class="fw-bold">
-                  The more you share, the better I can prepare for our discovery
-                  call.
-                </p>
+              <div class="container-sm">
+                <div class="text-wrapper">
+                  <h3 class="lrg-text tx-primary">
+                    Tell Me a Little About Your Child
+                  </h3>
+                  <p class="fw-bold">
+                    The more you share, the better I can prepare for our
+                    discovery call.
+                  </p>
+                </div>
               </div>
+
               <div class="form-container">
                 <form
                   class="form-wrapper"
@@ -214,23 +237,5 @@ sessions available. Book a free consultation today."
       </footer>
     </main>
   </body>
-  <script>
-    const menuToggle = document.querySelector(".menu-toggle");
-    const navLinks = document.querySelector(".nav-links");
-
-    menuToggle.addEventListener("click", () => {
-      const isOpen = navLinks.classList.toggle("active");
-      menuToggle.classList.toggle("active");
-      menuToggle.setAttribute("aria-expanded", isOpen);
-    });
-
-    // Close menu when a nav link is clicked
-    navLinks.querySelectorAll("a").forEach((link) => {
-      link.addEventListener("click", () => {
-        navLinks.classList.remove("active");
-        menuToggle.classList.remove("active");
-        menuToggle.setAttribute("aria-expanded", false);
-      });
-    });
-  </script>
 </html>
+
