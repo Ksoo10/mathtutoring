@@ -351,6 +351,14 @@ nav {
   font-size: var(--fs-large);
 }
 
+.border-bottom {
+  border-bottom: 1px solid var(--clr-primary);
+  padding-bottom: var(--sp-4);
+  @media (width >= 757px) {
+    border:none;
+  }
+}
+
 /*Color Classes*/
 
 /*Buttons Styling*/
@@ -444,6 +452,16 @@ nav {
 margin-top: var(--sp-4);
   @media (width <= 757px) {
     flex-wrap: wrap;
+  }
+}
+
+.flex-space-between-wrap {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  gap: 1rem;
+  @media (width <= 757px) {
+    flex-direction: column;
   }
 }
 
