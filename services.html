@@ -7,6 +7,7 @@
     <meta name="description" content="" />
     <title>Document</title>
     <link rel="stylesheet" href="styles.css" />
+    <script src="index.js" defer></script>
   </head>
   <header>
     <nav>
@@ -17,8 +18,8 @@
       ></button>
       <ul class="nav-links">
         <li class="menu-links"><a href="index.html">Home</a></li>
-        <li class="menu-links"><a href="services.html">Topics Covered</a></li>
-        <li class="menu-links"><a href="about-us.html">Learn About Adrian</a></li>
+        <li class="menu-links"><a href="service.html">Services</a></li>
+        <li class="menu-links"><a href="about-us.html">About Us</a></li>
       </ul>
     </nav>
   </header>
@@ -29,8 +30,14 @@
         <div class="flex-row-between-wrap container-lg">
           <div class="container-sm">
             <div class="text-wrapper">
-              <h1 class="tx-primary">Topic I Cover</h1>
-              <a class="primary-btn">Book a Free Consultation</a>
+              <h1 class="tx-primary border-bottom">Topics I Cover</h1>
+                   <p>
+                I work through the exact math skills your child is learning in
+                school right now. Every session I build is focused, relevant,
+                and paced around where your child actually is.
+              </p>
+              <a id="#contact" class="primary-btn">Book a Free Consultation</a>
+          
             </div>
           </div>
         </div>
@@ -44,62 +51,56 @@
               <h2 class="fw-bold tx-primary">
                 Math Support for Every Grade From 3rd Through 6th
               </h2>
-              <p class="fw-bold">
-                I work through the exact math skills your child is learning in
-                school right now. Every session I build is focused, relevant,
-                and paced around where your child actually is.
-              </p>
             </div>
           </div>
-          <div class="">
-            <div class="flex-space-between-wrap container-lg">
-              <div class="container-item">
-                <h3 class="fw-bold tx-primary">3rd Grade</h3>
-                <ul class="border-bottom">
-                  <li>Multiplication</li>
-                  <li>Division</li>
-                  <li>Addition</li>
-                  <li>Subtraction</li>
-                  <li>Fractions</li>
-                  <li>Word Problems</li>
-                </ul>
-              </div>
 
-              <div class="container-item">
-                <h3 class="fw-bold tx-primary">4th Grade</h3>
-                <ul class="border-bottom">
-                  <li>Multi Digit Multiplication</li>
-                  <li>Multi Digit Division</li>
-                  <li>Fractions</li>
-                  <li>Decimals</li>
-                  <li>Geometry</li>
-                  <li>Unit Conversions</li>
-                </ul>
-              </div>
+          <div class="flex-space-between-wrap container-lg">
+            <div class="container-item">
+              <h3 class="fw-bold tx-primary">3rd Grade</h3>
+              <ul class="border-bottom">
+                <li>Multiplication</li>
+                <li>Division</li>
+                <li>Addition</li>
+                <li>Subtraction</li>
+                <li>Fractions</li>
+                <li>Word Problems</li>
+              </ul>
+            </div>
 
-              <div class="container-item">
-                <h3 class="fw-bold tx-primary">5th Grade</h3>
-                <ul class="border-bottom">
-                  <li>Fractions and Mixed Numbers</li>
-                  <li>Decimals</li>
-                  <li>Geometry</li>
-                  <li>Measurement</li>
-                  <li>Patterns and Expressions</li>
-                  <li>Word Problems</li>
-                </ul>
-              </div>
+            <div class="container-item">
+              <h3 class="fw-bold tx-primary">4th Grade</h3>
+              <ul class="border-bottom">
+                <li>Multi Digit Multiplication</li>
+                <li>Multi Digit Division</li>
+                <li>Fractions</li>
+                <li>Decimals</li>
+                <li>Geometry</li>
+                <li>Unit Conversions</li>
+              </ul>
+            </div>
 
-              <div class="container-item">
-                <h3 class="fw-bold tx-primary">6th Grade</h3>
- <ul class="border-bottom">
-                  <li>Ratios and Proportional Reasoning</li>
-                  <li>Fractions and Decimals</li>
-                  <li>Geometry</li>
-                  <li>Unit Conversions</li>
-                  <li>Pre Algebra</li>
-                  <li>Data Analysis</li>
-                </ul>
-              </div>
+            <div class="container-item">
+              <h3 class="fw-bold tx-primary">5th Grade</h3>
+              <ul class="border-bottom">
+                <li>Fractions and Mixed Numbers</li>
+                <li>Decimals</li>
+                <li>Geometry</li>
+                <li>Measurement</li>
+                <li>Patterns and Expressions</li>
+                <li>Word Problems</li>
+              </ul>
+            </div>
+
+            <div class="container-item">
+              <h3 class="fw-bold tx-primary">6th Grade</h3>
+              <ul class="border-bottom">
+                <li>Ratios and Proportional Reasoning</li>
+                <li>Fractions and Decimals</li>
+                <li>Geometry</li>
+                <li>Unit Conversions</li>
+                <li>Pre Algebra</li>
+                <li>Data Analysis</li>
+              </ul>
             </div>
           </div>
         </div>
@@ -212,23 +213,4 @@
       </footer>
     </main>
   </body>
-  <script>
-    const menuToggle = document.querySelector(".menu-toggle");
-    const navLinks = document.querySelector(".nav-links");
-
-    menuToggle.addEventListener("click", () => {
-      const isOpen = navLinks.classList.toggle("active");
-      menuToggle.classList.toggle("active");
-      menuToggle.setAttribute("aria-expanded", isOpen);
-    });
-
-    // Close menu when a nav link is clicked
-    navLinks.querySelectorAll("a").forEach((link) => {
-      link.addEventListener("click", () => {
-        navLinks.classList.remove("active");
-        menuToggle.classList.remove("active");
-        menuToggle.setAttribute("aria-expanded", false);
-      });
-    });
-  </script>
 </html>
