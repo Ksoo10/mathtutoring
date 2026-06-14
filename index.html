@@ -12,24 +12,28 @@ sessions available. Book a free consultation today."
     />
     <title>Precision Math Tutoring</title>
     <link rel="stylesheet" href="styles.css" />
-      <script src="index.js" defer></script>
+    <script src="index.js" defer></script>
   </head>
   <body>
     <main>
-        <header>
-      <nav>
-        <button
-          class="menu-toggle"
-          aria-label="Toggle Menu"
-          aria-expanded="false"
-        ></button>
-        <ul class="nav-links">
-          <li class="menu-links"><a href="index.html">Home</a></li>
-          <li class="menu-links"><a href="services.html">Topics Covered</a></li>
-          <li class="menu-links"><a href="about-us.html">Learn About Adrian</a></li>
-        </ul>
-      </nav>
-    </header>
+      <header>
+        <nav>
+          <button
+            class="menu-toggle"
+            aria-label="Toggle Menu"
+            aria-expanded="false"
+          ></button>
+          <ul class="nav-links">
+            <li class="menu-links"><a href="index.html">Home</a></li>
+            <li class="menu-links">
+              <a href="services.html">Topics Covered</a>
+            </li>
+            <li class="menu-links">
+              <a href="about-us.html">Learn About Adrian</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
       <!-- twocolumnSection -->
       <section id="hero" class="section">
         <div class="flex-row-center-wrap container-lg">
@@ -173,9 +177,9 @@ sessions available. Book a free consultation today."
                 and has spent the past
                 <span class="fw-bold tx-primary">5 Years </span> teaching
                 students in 3rd and 6th grade. He understands exactly where
-                Young learners get stuck on multiplication and division in 3rd grade
-                grade to ratios and pre-algebra in 6th grade. Every concept is
-                covered with
+                Young learners get stuck on multiplication and division in 3rd
+                grade grade to ratios and pre-algebra in 6th grade. Every
+                concept is covered with
                 <span class="fw-bold tx-primary">patience</span> and
                 <span class="fw-bold tx-primary">clarity</span>.
               </p>
@@ -185,9 +189,10 @@ sessions available. Book a free consultation today."
                 classroom, Adrian has seen firsthand what makes math click for
                 young students. He builds every session around your child's
                 current schoolwork, so nothing feels disconnected or confusing.
-                Whether your child is mastering multiplication tables in 3rd grade
-                grade or navigating ratios and pre-algebra in 6th grade, Adrian
-                meets them with a clear plan and a calm, encouraging approach.
+                Whether your child is mastering multiplication tables in 3rd
+                grade grade or navigating ratios and pre-algebra in 6th grade,
+                Adrian meets them with a clear plan and a calm, encouraging
+                approach.
               </p>
             </div>
           </div>
@@ -200,9 +205,12 @@ sessions available. Book a free consultation today."
           <div class="flex-row-between-wrap">
             <div class="container-sm">
               <div class="text-wrapper flex-center">
-                <h3 class="lrg-text tx-primary">Things Parents Usually Ask Me</h3>
+                <h3 class="lrg-text tx-primary">
+                  Things Parents Usually Ask Me
+                </h3>
                 <p class="fw-bold">
-                 Still not sure? Give me a call directly. I would rather talk it through with you than have you figure it out on your own.
+                  Still not sure? Give me a call directly. I would rather talk
+                  it through with you than have you figure it out on your own.
                 </p>
               </div>
               <!-- accordionWidget -->
@@ -314,13 +322,22 @@ sessions available. Book a free consultation today."
                 name="email"
                 placeholder="Enter your Email"
               />
-               <label for="phone">Phone Number </label>
-                  <input
-                    type="tel"
-                    id="phone"
-                    name="phone"
-                    placeholder="Enter your phone number"
-                  />
+              <label for="phone">Phone Number </label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="Enter your phone number"
+              />
+
+              <label for="grade-select">Choose a grade:</label>
+              <select name="grade" id="grade-select">
+                <option value="">--Please choose an option--</option>
+                <option value="3">3rd</option>
+                <option value="4">4th</option>
+                <option value="5">5th</option>
+                <option value="6">6th</option>
+              </select>
               <label for="msg">Message</label>
               <textarea
                 id="msg"
@@ -397,23 +414,4 @@ sessions available. Book a free consultation today."
       </footer>
     </main>
   </body>
-  <script>
-    const menuToggle = document.querySelector(".menu-toggle");
-    const navLinks = document.querySelector(".nav-links");
-
-    menuToggle.addEventListener("click", () => {
-      const isOpen = navLinks.classList.toggle("active");
-      menuToggle.classList.toggle("active");
-      menuToggle.setAttribute("aria-expanded", isOpen);
-    });
-
-    // Close menu when a nav link is clicked
-    navLinks.querySelectorAll("a").forEach((link) => {
-      link.addEventListener("click", () => {
-        navLinks.classList.remove("active");
-        menuToggle.classList.remove("active");
-        menuToggle.setAttribute("aria-expanded", false);
-      });
-    });
-  </script>
 </html>
