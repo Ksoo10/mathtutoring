@@ -102,85 +102,72 @@ sessions for 3rd and 6th graders."
         </div>
       </section>
       <!-- itemLayout1 -->
-
-      <!-- itemLayout1 -->
+      <!-- ─── CONTACT FORM ─── -->
       <section id="contact" class="section">
-        <div class="container-lg">
-          <div class="flex-row-between-wrap">
-            <!-- ─── CONTACT FORM ─── -->
-            <div class="flex-row-center-wrap container-lg">
-              <div class="container-sm">
-                <div class="text-wrapper">
-                  <h3 class="lrg-text tx-primary">
-                    Tell Me a Little About Your Child
-                  </h3>
-                  <p>
-                    The more you share, the better I can prepare for our
-                    discovery call.
-                  </p>
-                </div>
+        <div class="flex-row-center-wrap container-lg">
+          <div class="text-wrapper">
+            <h3 class="lrg-text tx-primary">
+              Tell Me a Little About Your Child
+            </h3>
+            <p class="fw-bold">
+              The more you share, the better I can prepare for our discovery
+              call.
+            </p>
+          </div>
+          <div class="form-container">
+            <form
+              class="form-wrapper"
+              action="#"
+              method="POST"
+              data-netlify="true"
+            >
+              <div class="text-wrapper">
+                <h3 class="fw-bold tx-primary">Get In Contact With Me</h3>
+                <span> Tell me a little about your child's needs.</span>
               </div>
+              <label for="name"> Parent Name</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Enter your name"
+              />
+              <label for="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Enter your Email"
+              />
+              <label for="phone">Phone Number </label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="Enter your phone number"
+              />
 
-              <div class="form-container">
-                <form
-                  class="form-wrapper"
-                  action="#"
-                  method="POST"
-                  data-netlify="true"
-                >
-                  <div class="text-wrapper">
-                    <h3 class="fw-bold tx-primary">Contact Us</h3>
-                    <span> Tell us a little about your child's needs.</span>
-                  </div>
-                  <label for="name"> Parent Name</label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    placeholder="Enter your name"
-                  />
-                  <label for="email">Email</label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    placeholder="Enter your Email"
-                  />
-                  <label for="phone">Phone Number </label>
-                  <input
-                    type="tel"
-                    id="phone"
-                    name="phone"
-                    placeholder="Enter your phone number"
-                  />
-
-                  <label for="grade-select">Choose a grade:</label>
-                  <select name="grade" id="grade-select">
-                    <option value="">--Please choose an option--</option>
-                    <option value="3">3rd</option>
-                    <option value="4">4th</option>
-                    <option value="5">5th</option>
-                    <option value="6">6th</option>
-                  </select>
-                  <label for="msg">Message</label>
-                  <textarea
-                    id="msg"
-                    name="msg"
-                    rows="2"
-                    placeholder="How can we help your child?"
-                  ></textarea>
-                  <button class="primary-btn" type="submit">
-                    Send Message
-                  </button>
-                </form>
-              </div>
-            </div>
-            <!-- ─── CONTACT FORM ─── -->
+              <label for="grade-select">Choose a grade:</label>
+              <select name="grade" id="grade-select">
+                <option value="">--Please choose an option--</option>
+                <option value="3">3rd</option>
+                <option value="4">4th</option>
+                <option value="5">5th</option>
+                <option value="6">6th</option>
+              </select>
+              <label for="msg">Message</label>
+              <textarea
+                id="msg"
+                name="msg"
+                rows="2"
+                placeholder="How can I help your child?"
+              ></textarea>
+              <button class="primary-btn" type="submit">Send Message</button>
+            </form>
           </div>
         </div>
       </section>
-      <!-- itemLayout1-->
-
+      <!-- ─── CONTACT FORM ─── -->
       <footer class="site-footer">
         <!-- Skeleton state -->
         <div class="container-lg">
@@ -200,43 +187,6 @@ sessions for 3rd and 6th graders."
             </div>
             <div class="footer-item">
               <a href="#">Privacy Policy</a>
-            </div>
-            <div class="flex-row-start-wrap">
-              <div class="footer-item">
-                <a href="#">
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="#229968"
-                    xmlns="http://www.w3.org/2000/svg"
-                    transform="rotate(0 0 0)"
-                  >
-                    <path
-                      d="M19.7065 3H4.34844C3.62264 3 3.04199 3.58065 3.04199 4.30645V19.6935C3.04199 20.3903 3.62264 21 4.34844 21H19.6485C20.3743 21 20.9549 20.4194 20.9549 19.6935V4.27742C21.013 3.58065 20.4323 3 19.7065 3ZM8.35491 18.3H5.71297V9.73548H8.35491V18.3ZM7.01942 8.54516C6.14846 8.54516 5.4807 7.84839 5.4807 7.00645C5.4807 6.16452 6.17749 5.46774 7.01942 5.46774C7.86136 5.46774 8.55813 6.16452 8.55813 7.00645C8.55813 7.84839 7.91942 8.54516 7.01942 8.54516ZM18.371 18.3H15.7291V14.1484C15.7291 13.1613 15.7001 11.8548 14.3356 11.8548C12.942 11.8548 12.7388 12.9581 12.7388 14.0613V18.3H10.0968V9.73548H12.6807V10.9258H12.7097C13.0872 10.229 13.9291 9.53226 15.2356 9.53226C17.9356 9.53226 18.4291 11.2742 18.4291 13.6548V18.3H18.371Z"
-                      fill="#229968"
-                    /></svg
-                ></a>
-              </div>
-              <div class="footer-item">
-                <a href="#"
-                  ><svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="#229968"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M12.1445 18.709C13.91 19.7033 15.8077 20.3757 17.7521 20.7262C18.2616 20.8181 18.7782 20.6388 19.1443 20.2727L20.2124 19.2045C21.118 18.2989 20.8403 16.7676 19.6744 16.2377L16.1076 14.6164C15.3921 14.2912 14.3287 14.4486 13.9441 15.1989L12.1445 18.709ZM12.1445 18.709C10.7498 17.9235 9.43759 16.9371 8.25026 15.7497C7.06293 14.5624 6.07651 13.2503 5.29099 11.8555M5.29099 11.8555C4.29669 10.0901 3.62428 8.19234 3.27376 6.24794C3.18191 5.73847 3.36125 5.22182 3.72733 4.85577L4.79552 3.78764C5.7011 2.88206 7.23243 3.15974 7.76238 4.32564L9.38366 7.89244C9.70889 8.60794 9.55145 9.67133 8.80112 10.056L5.29099 11.8555Z"
-                      stroke="#323544"
-                      stroke-width="1.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </a>
-              </div>
             </div>
           </div>
           <!-- Company links -->
